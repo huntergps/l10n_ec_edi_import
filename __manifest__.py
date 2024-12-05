@@ -16,7 +16,8 @@
     'license': 'LGPL-3',
     'depends': [
         "account_edi",
-        "l10n_ec",
+        'l10n_ec',
+        'stock',
         'l10n_ec_base'
     ],
     'data': [
