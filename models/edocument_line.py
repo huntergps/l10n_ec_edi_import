@@ -94,12 +94,8 @@ class ElectronicDocumentLine(models.Model):
         change_default=True, default=_get_default_category_id, group_expand='_read_group_categ_id',
         required=True)
 
-    tipo_homologacion = fields.Selection(
-        [
-            ('auto', 'Homologación automática'),
-            ('manual', 'Homologación manual')
-            ],
-        related='document_id.tipo_homologacion', string='Tipo de Homologación', readonly=True, copy=False, store=True)
+    tipo_homologacion = fields.Selection(related='document_id.tipo_homologacion',
+        string='Tipo de Homologación', readonly=True, copy=False, store=True)
 
     tracking = fields.Selection([
         ('serial', 'Serie'),
